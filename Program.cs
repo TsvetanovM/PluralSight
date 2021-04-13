@@ -14,7 +14,7 @@ namespace GradeBook
                 totalGrades += grade;
             }
 
-            System.Console.WriteLine(totalGrades / grades.Count);
+            System.Console.WriteLine($"The average grade is {totalGrades / grades.Count:N2}");
         }
     }
 }
