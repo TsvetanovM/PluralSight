@@ -14,7 +14,7 @@ namespace GradeBook
         }
 
         public void AddGrade(double grade) {
-            if (grade >= 2 || grade <= 6 ) 
+            if (grade >= 2 && grade <= 6 ) 
             {
                 grades.Add(grade);
             }
@@ -22,6 +22,19 @@ namespace GradeBook
 
         public string GetName() {
             return this.name;
+        }
+
+        public double GetHighestGrade() {
+           double highestGrade = double.MinValue;
+           if (grades.Count == 0) {
+               return 0;
+           }
+           foreach(double grade in grades) {
+               if (grade > highestGrade) {
+                   highestGrade = grade;
+               }
+           }
+            return highestGrade;
         }
     }
 }
