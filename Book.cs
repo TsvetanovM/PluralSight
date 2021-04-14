@@ -36,5 +36,26 @@ namespace GradeBook
            }
             return highestGrade;
         }
+
+        public double GetLowestGrade() {
+            double lowestGrade = double.MaxValue;
+           if (grades.Count == 0) {
+               return 0;
+           }
+           foreach(double grade in grades) {
+               if (grade < lowestGrade) {
+                   lowestGrade = grade;
+               }
+           }
+            return lowestGrade;
+        }
+
+        public double GetAverageGrade() {
+            double totalGrades = 0;
+            foreach(double grade in grades) {
+                totalGrades += grade;
+            }
+            return totalGrades/grades.Count;
+        }
     }
 }

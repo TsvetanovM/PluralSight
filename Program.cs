@@ -16,6 +16,8 @@ namespace GradeBook
             book.AddGrade(5.25);
             System.Console.WriteLine(book.GetName());
             System.Console.WriteLine(book.GetHighestGrade());
+            System.Console.WriteLine(book.GetLowestGrade());
+            System.Console.WriteLine(book.GetAverageGrade());
         }
     }
 
