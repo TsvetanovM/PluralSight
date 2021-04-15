@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GradeBook 
 {
@@ -51,11 +52,7 @@ namespace GradeBook
         }
 
         public double GetAverageGrade() {
-            double totalGrades = 0;
-            foreach(double grade in grades) {
-                totalGrades += grade;
-            }
-            return totalGrades/grades.Count;
+            return grades.Average();
         }
     }
 }
