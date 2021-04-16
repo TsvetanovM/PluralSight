@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace GradeBook 
 {
-    class Book 
+   public class Book 
     {
         private List<double> grades;
         private string name;
